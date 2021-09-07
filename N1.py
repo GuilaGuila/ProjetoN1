@@ -1,5 +1,6 @@
 sala = 1 
 
+#teste
 
 print("Você está na sala 1!")
 print("Escolha seu caminho:")
