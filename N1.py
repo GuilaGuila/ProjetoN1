@@ -8,4 +8,14 @@ def Path(dungeon , choice):
     else:
         print("Esta opção é inválida!")
 
+def Room(dungeon):
+    if(dungeon == 6):
+        print("Você está na sala {}" .format(dungeon))
+        print("Existe somente um caminho")
+        print("[2] - Caminho Preto")
+    else:
+        print("Você está na sala {}" .format(dungeon))
+        print("Escolha seu caminho")
+        print("[1] - Caminho Vermelho")
+        print("[2] - Caminho Preto")
 
