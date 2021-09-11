@@ -13,15 +13,15 @@ def Path(dungeon, choice):
     return dungeon
 
 def Room(dungeon):
-    while(dungeon == 6):
+    while(dungeon != 6):
         print("Você está na sala {}" .format(dungeon))
-        print("Existe somente um caminho")
+        print("Escolha seu caminho")
+        print("[1] - Caminho Vermelho")
         print("[2] - Caminho Preto")
         return True
 
     print("Você está na sala {}" .format(dungeon))
-    print("Escolha seu caminho")
-    print("[1] - Caminho Vermelho")
+    print("Existe somente um caminho")
     print("[2] - Caminho Preto")
 
 dungeon = 1 
@@ -29,13 +29,14 @@ i = 0
 
 while(dungeon != 9 and i < 7):
     Room(dungeon)
-    choice = int(input("Digite o numero do seu caminho: "))
+    choice = int(input())
     print()
     dungeon = Path(dungeon, choice)
     i += 1
-print("Voce usou isso de jogadas: ",i)
+
 if(dungeon == 9):
     print("Parabéns você ganhou! Encontrou a sala 9 antes de esgotar os movimentos!")
+    print("Voce usou {} jogadas".format(i))
     print("  ___________")
     print(" '._==_==_=_.'")
     print(" .-\:      /-.")
@@ -47,4 +48,4 @@ if(dungeon == 9):
     print("    _.' '._")
     print("   '''''''''")
 else:
-    print("Você perdeu!")
+    print("Você perdeu! Usou mais de 6 jogadas!")
